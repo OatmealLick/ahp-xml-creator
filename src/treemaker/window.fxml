@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<?import treemaker.CustomTextField?>
+<BorderPane fx:id="masterPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="treemaker.Controller">
+   <left>
+      <GridPane prefHeight="500.0" prefWidth="241.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="101.0" minWidth="10.0" prefWidth="95.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="129.0" minWidth="10.0" prefWidth="105.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Alternatives" />
+            <Label text="Consistency" GridPane.rowIndex="1" />
+            <Label text="Label" GridPane.rowIndex="2" />
+            <Label text="Label" GridPane.rowIndex="3" />
+            <ChoiceBox fx:id="alternatives" prefWidth="150.0" GridPane.columnIndex="1" />
+            <Button mnemonicParsing="false" onAction="#generateXml" text="Button" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+   </left>
+   <center>
+      <VBox fx:id="hboxContainer" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox fx:id="hbox_0" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="1000.0">
+                     <children>
+                        <CustomTextField fx:id="root" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onMouseClicked="#handleClick" prefHeight="100.0" prefWidth="1000.0" promptText="insert title" />
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <HBox fx:id="hbox_1" prefHeight="100.0" prefWidth="200.0" />
+            <HBox fx:id="hbox_2" prefHeight="100.0" prefWidth="200.0" />
+            <HBox fx:id="hbox_3" prefHeight="100.0" prefWidth="200.0" />
+            <HBox fx:id="hbox_4" prefHeight="100.0" prefWidth="200.0" />
+         </children>
+      </VBox>
+   </center>
+   <bottom>
+      <VBox>
+         <children>
+            <GridPane fx:id="valuesGridPane" BorderPane.alignment="CENTER">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="1:2" />
+                  <Label text="1:3" GridPane.columnIndex="1" />
+                  <Label text="1:4" GridPane.columnIndex="2" />
+                  <Label text="1:5" GridPane.columnIndex="3" />
+                  <Label text="2:3" GridPane.columnIndex="4" />
+                  <Label text="2:4" GridPane.columnIndex="5" />
+                  <Label text="2:5" GridPane.columnIndex="6" />
+                  <Label text="3:4" GridPane.columnIndex="7" />
+                  <Label text="3:5" GridPane.columnIndex="8" />
+                  <Label text="4:5" GridPane.columnIndex="9" />
+                  <TextField GridPane.columnIndex="9" GridPane.rowIndex="1" />
+                  <TextField GridPane.columnIndex="8" GridPane.rowIndex="1" />
+                  <TextField GridPane.columnIndex="7" GridPane.rowIndex="1" />
+                  <TextField GridPane.columnIndex="6" GridPane.rowIndex="1" />
+                  <TextField GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                  <TextField GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                  <TextField GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                  <TextField GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField GridPane.rowIndex="1" />
+               </children>
+            </GridPane>
+            <Button mnemonicParsing="false" onAction="#saveNode" prefWidth="2000.0" text="Save" />
+         </children>
+      </VBox>
+   </bottom>
+</BorderPane>
